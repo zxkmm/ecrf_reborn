@@ -1,0 +1,1 @@
+Put these libs on whatever (usually `~/Arduino/libraries/`) your Arduino storage libs, do not update them.
