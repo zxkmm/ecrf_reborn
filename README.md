@@ -1,5 +1,5 @@
 # ecrf_reborn
-This repo tuned outdated dependents and make ecrf-v2 can't compile-flash normally
+This repo fine-tuned outdated dependents and make ecrf-v2 can compile and flash normally
 
 # NOTE
 ## This repo exists ONLY because the original ECRF project is abandened (or at least paused developing for long), and many dependents it is using, are changing, so not compatible anymore.
