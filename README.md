@@ -13,6 +13,7 @@ This repo tuned outdated dependents and make ecrf-v2 can't compile-flash normall
     NOTE: I fine tuned the libs in it, thus if arduino ask you to update libs, DO NOT UPDATE THEM
 3. open the latest_ecrf/EvilCrow-RFv2/EvilCrow-RFv2.ino in Arduino IDE, following official guide to set board info and port, then flash
 4. Following official guide to put sdcard content into your sdcard.
+5. Star this repo so when you want it back, you can find it.
 
 # Q&A
 Q: Why this   
