@@ -33,7 +33,7 @@
  */
 
 #include <assert.h>
-#include "uzlib.h"
+#include "tinf.h"
 
 #define UZLIB_DUMP_ARRAY(heading, arr, size) \
     { \
@@ -511,10 +511,6 @@ static int tinf_inflate_block_data(TINF_DATA *d, TINF_TREE *lt, TINF_TREE *dt)
             }
         } else {
             /* catch trying to point before the start of dest buffer */
-
-            #pragma GCC diagnostic push
-            #pragma GCC diagnostic ignored "-Wsign-compare"
-
             if (offs > d->dest - d->destStart) {
                 #if UZLIB_CONF_DEBUG_LOG >= 2
                   printf("tinf_inflate_block_data: bad dictionnary offset, %d oustide max range %d])\n", offs, d->dest - d->destStart );
@@ -522,8 +518,6 @@ static int tinf_inflate_block_data(TINF_DATA *d, TINF_TREE *lt, TINF_TREE *dt)
                 return TINF_DATA_ERROR;
             }
             d->lzOff = -offs;
-
-            #pragma GCC diagnostic pop
         }
     }
 
@@ -731,7 +725,6 @@ int uzlib_uncompress_chksum(TINF_DATA *d)
 
         case TINF_CHKSUM_CRC:
             val = tinf_get_le_uint32(d);
-
             if (~d->checksum != val) {
                 return TINF_CHKSUM_ERROR;
             }
