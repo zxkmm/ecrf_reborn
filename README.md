@@ -1,3 +1,8 @@
+# ARCHIVED
+I archived this repo since the original developer already made an up to date version of opensource firmware.
+
+# original README
+```
 # ecrf_reborn
 This repo fine-tuned outdated dependents and make ecrf-v2 can compile and flash normally
 
@@ -26,3 +31,4 @@ So I created this repo that contains those libs that stays at the last version w
 
 Q: Why not submodule, which looks less like you stealing code from others  
 A: I lazy.
+```
